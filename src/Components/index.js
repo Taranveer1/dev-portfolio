@@ -1,9 +1,9 @@
-import Home from "./Home";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import About from "./About";
-import Footer from "./footer";
-import Experience from "./Experience";
+import Home from "./Home/Home";
+import Header from "./Navbar/Navbar";
+import Sidebar from "./Sidebar/Sidebar";
+import About from "./About/About";
+import Footer from "./Footer/footer";
+import Experience from "./Experience/Experience";
 
 
 export default function Index() {

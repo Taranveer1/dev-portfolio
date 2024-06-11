@@ -1,6 +1,6 @@
 import React from 'react';
 import ExperienceCard from './ExperienceCard';
-import experienceImage from '../assets/sparc.png'; // Adjust the path based on your folder structure
+import experienceImage from "../../assets/sparc.png";
 
 function Experience() {
     const experiences = [

@@ -1,10 +1,10 @@
 import React from 'react';
-import profileImage from '../assets/profile1.jpg'; // Adjust the path based on your folder structure
+import profileImage from "../../assets/profile1.jpg";
 
 function About() {
     return (
-        <div className="min-h-screen flex justify-center items-center bg-[#0a192f] p-6">
-            <div className="flex flex-col lg:flex-row max-w-5xl w-full bg-[#112240] rounded-lg shadow-lg overflow-hidden">
+        <div className="min-h-screen flex justify-center items-center p-6" id="about">
+            <div className="flex flex-col lg:flex-row max-w-5xl w-full rounded-lg shadow-lg overflow-hidden">
                 {/* Text Section */}
                 <div className="lg:w-3/5 p-8 lg:p-12">
                     <h2 className="text-5xl font-bold text-blue-200 mb-6">
@@ -26,6 +26,7 @@ function About() {
                     />
                 </div>
             </div>
+            
         </div>
     );
 }
