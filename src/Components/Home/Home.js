@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div
-      className="flex justify-center items-center h-screen bg-darkBlue"
+      className="flex justify-center items-center bg-darkBlue min-h-screen"
       id="home"
     >
       <div className="text-left mb-40 md:mb-0 p-6 md:p-0">
@@ -20,7 +20,7 @@ function Home() {
           <span className="text-green">{"/>"}</span>
         </p>
 
-        <p className="text-gray text-sm md:text-xl">
+        <p className="text-gray text-sm md:text-xl font-semibold">
           Penn State CS student, skilled in Java/Python.
           <br />
           Eager to learn and grow.
