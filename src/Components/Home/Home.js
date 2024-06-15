@@ -1,15 +1,11 @@
 import React from "react";
 
 function Home() {
-  const handleScrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="flex justify-center items-center h-screen" id="home">
+    <div
+      className="flex justify-center items-center h-screen bg-darkBlue"
+      id="home"
+    >
       <div className="text-left mb-40 md:mb-0 p-6 md:p-0">
         <p className="text-green text-xl font-bold mb-3 md:mb-6 md:text-2xl">
           Hi, my name is...
@@ -29,14 +25,13 @@ function Home() {
           <br />
           Eager to learn and grow.
         </p>
-
-        <button
-          className="p-3 pt-2 pb-2 mt-10 bg-green text-blue rounded-full text-xs font-bold flex justify-center items-center hover:scale-125"
-          onClick={handleScrollToAbout} // Call handleScrollToAbout on button click
+        <a
+          className="inline-flex w-auto items-center justify-center p-3 pt-2 pb-2 mt-10 bg-green text-white rounded-full text-xs font-bold hover:scale-125"
+          href="#about"
         >
           Scroll Down
-          <i class="bx bxs-chevron-down-circle bg-green pl-1"></i>
-        </button>
+          <i className="bx bxs-chevron-down-circle bg-green pl-1"></i>
+        </a>
       </div>
     </div>
   );

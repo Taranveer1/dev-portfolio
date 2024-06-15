@@ -20,7 +20,7 @@ function ExperienceItem() {
   const isSingleExperience = experiences.length === 1;
 
   return (
-    <div className="container mx-auto mt-5">
+    <div className="mx-auto mt-1 md:mt-5">
       <div className="max-w-4xl mx-auto">
         <div
           className="grid grid-cols-1 gap-5"
@@ -31,24 +31,24 @@ function ExperienceItem() {
               className="cursor-pointer shadow-2xl rounded-lg flex items-center py-3 transform transition-transform duration-300 ease-in-out hover:-translate-y-2"
               onClick={() => openModal(experience)}
             >
-              <div className="border-r-2 border-blue">
+              <div className="border-r-2 border-blue p-6">
                 <img
                   src={experience.image}
                   alt="veefriends logo"
-                  className="object-cover w-20 h-20 md:w-32 md:h-32"
+                  className="object-cover h-10 w-10 md:w-20 md:h-20"
                 />
               </div>
               <div className="ml-3">
-                <p className="text-xl font-bold text-green mb-2">
+                <p className="font-bold text-green  text-sm md:text-lg">
                   {experience.name}
                 </p>
-                <p className="text-blue font-semibold mb-1">
+                <p className="text-blue font-semibold mb-1  text-sm md:text-lg">
                   {experience.role}
                 </p>
-                <p className="text-gray">{experience.location}</p>
-                <p className="text-gray">{experience.date}</p>
+                <p className="text-gray text-sm md:text-md">{experience.location}</p>
+                <p className="text-gray text-sm md:text-md">{experience.date}</p>
                 <div onClick={() => openModal(experience)}>
-                  <p className="text-gray font-semibold">More info</p>
+                  <p className="text-gray font-semibold text-sm md:text-md">More info</p>
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@ function ExperienceModal({ experience, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-darkBlue">
       <div className="fixed inset-0"></div>
       <div className="modal-content shadow-2xl p-10 sm:p-20 rounded-md relative flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center text-center">

@@ -3,18 +3,21 @@ import Header from "./Navbar/Navbar";
 import Sidebar from "./Sidebar/Sidebar";
 import About from "./About/About";
 import Footer from "./Footer/footer";
-// import Experience from "./About/Experience/Experience";
-
+import Experience from "./Experience/Experience";
+import Contact from "./Contact/Contact";
+import Projects from "./Projects/Projects";
 
 export default function Index() {
   return (
     <>
-      <Header/>
-      <Sidebar/>
+      <Header />
+      <Sidebar />
       <Home />
-      <About/>
-      {/* <Experience/> */}
-      <Footer/>
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }
