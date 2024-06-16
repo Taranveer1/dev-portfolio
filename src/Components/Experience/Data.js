@@ -10,7 +10,7 @@ const data = [
     name: "SPARC",
     role: "Software Engineer Intern",
     location: "📍 State College, PA",
-    date: "May 2024 - Aug 2024",
+    date: "⏰ May 2024 - Aug 2024",
     technologies: [
       "<i class='bx bxl-tailwind-css'></i>",
       "<i class='bx bxl-react-native' ></i>",
@@ -29,7 +29,7 @@ const data = [
     name: "PassMaster",
     role: "Software Development Intern",
     location: "📍 Center Valley, PA",
-    date: "Mar 2022 - Sept 2023",
+    date: "⏰ Mar 2022 - Sept 2023",
     technologies: [
       "<i class='bx bxl-tailwind-css'></i>",
       "<i class='bx bxl-react' ></i>",
@@ -48,7 +48,7 @@ const data = [
     name: "MIT",
     role: "CyberSecurity Intern",
     location: "📍 Center Valley, PA",
-    date: "Feb 2022 - Jul 2022",
+    date: "⏰ Feb 2022 - Jul 2022",
     technologies: [
       "<i class='bx bxl-tailwind-css'></i>",
       "<i class='bx bxl-react' ></i>",
