@@ -247,7 +247,7 @@ function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="shadow bg-transparent border border-blue text-blue text-sm rounded block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-orange focus:border-green"
+                  className="shadow bg-transparent border border-blue text-blue text-sm rounded block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-green focus:border-green"
                   placeholder="contact@taranveer.dev"
                   required
                 />

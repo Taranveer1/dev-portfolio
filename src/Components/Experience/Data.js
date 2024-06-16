@@ -1,4 +1,4 @@
-import Logo from "./sparc1.png"
+import Logo from "./sparc_logo.png"
 import Logo1 from "./logo.png"
 import Logo2 from "./logo-colors-BG-black.png" 
 
