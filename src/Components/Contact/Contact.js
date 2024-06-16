@@ -209,9 +209,10 @@ function Contact() {
       id="contact"
     >
       <div className="max-w-md w-full">
-        <h2 className="text-3xl font-semibold text-green text-center">
-          Get in touch!
-        </h2>
+        <h2 className="text-4xl font-semibold text-green border-b-2 border-blue mx-auto my-8 text-center w-fit">
+  Get in touch!
+</h2> 
+
         <div>
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <form onSubmit={handleSubmit} className="space-y-8">

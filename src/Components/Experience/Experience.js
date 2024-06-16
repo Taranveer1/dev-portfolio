@@ -4,10 +4,13 @@ import ExperienceCard from "./ExperienceItem";
 function Experience() {
   return (
     <div
-      className="sm:flex justify-center items-center min-h-max px-6 md:px-24 py-20 bg-darkBlue"
+      className="flex flex-col justify-center items-center min-h-max px-6 md:px-24 py-20 bg-[#0a192f]"
       id="experience"
     >
-      <p>Experience</p>
+      <p className="text-xl sm:text-5xl font-bold text-green border-b-2 border-blue w-fit mb-12">
+          Experience
+      </p>
+
       <ExperienceCard />
     </div>
   );

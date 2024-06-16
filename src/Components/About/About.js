@@ -17,10 +17,10 @@ function About() {
           </div>
           <div className="flex-1 p-6 order-2 md:order-1">
             <div>
-              <p className="text-xl sm:text-3xl font-semibold text-green border-b-2 border-blue w-fit">
+              <p className="text-xl sm:text-4xl font-semibold text-green border-b-2 border-blue w-fit">
                 About Me
               </p>
-              <p className="text-blue mt-2 md:mt-5 text-sm sm:text-lg w-10/12 font-medium">
+              <p className="text-gray mt-2 md:mt-5 text-sm sm:text-lg w-10/12 font-medium">
                 I'm Taranveer Flora, passionate about solving problems with
                 software development. My journey began in high school with a
                 mobile app project, leading me to study computer science at Penn
