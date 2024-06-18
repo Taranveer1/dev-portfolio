@@ -1,7 +1,12 @@
 html {
   scroll-behavior: smooth;
+  background-color: #0a192f;
 }
 footer {
   background-color: #0a192f; /* blue-200 color */
   color: #000; /* black text */
+}
+
+.dark-shadow {
+  box-shadow: 0 4px 8px 0 rgba(111, 107, 107, 0.2);
 }
