@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import useGlobalStore from '../../store';
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home"); // Initialize activeLink with "#home"
+  const [activeLink, setActiveLink] = useState("#home"); 
+  const navTitle = useGlobalStore((state) => state.navTitle);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -15,7 +18,7 @@ function Navbar() {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
             <div className="text-lg font-semibold">
-              <button className="text-green text-3xl">Taranveer.dev</button>
+              <button className="text-green text-3xl">{navTitle || 'My Portfolio'}</button>
             </div>
             <div className="hidden md:flex space-x-12">
               {[

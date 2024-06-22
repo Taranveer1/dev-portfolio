@@ -1,23 +1,46 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faXTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import React, { useEffect, useState } from "react";
+import client from "../../client";
 
 const Sidebar = () => {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "socials"]{
+          "socialLinks": Social_Links[]{
+            "link": social_link,
+            "icon": icon
+          }
+        }`
+      )
+      .then((data) => {
+        if (data.length > 0) {
+          let socialLinks = data[0].socialLinks;
+          setData(socialLinks);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
+
   return (
     <div className="fixed bottom-0 left-0 p-9 hidden sm:block">
       <div className="flex flex-col items-center">
-        {/* Social Links */}
-        <a href="https://github.com/Taranveer1" target="_blank" rel="noopener noreferrer" className="text-blue mb-3 hover:text-green">
-          <FontAwesomeIcon icon={faGithub} size="2x" />
-        </a>
-        <a href="https://twitter.com/TaranveerFlora" target="_blank" rel="noopener noreferrer" className="text-blue mb-3 hover:text-green">
-          <FontAwesomeIcon icon={faXTwitter} size="2x" />
-        </a>
-        <a href="https://linkedin.com/in/taranveerflora" target="_blank" rel="noopener noreferrer" className="text-blue mb-3 hover:text-green">
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
-        </a>
-
-        {/* Decorative Line */}
+        {data.map((social, index) => (
+          <a
+            key={index}
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue mb-3 hover:text-green text-3xl"
+            dangerouslySetInnerHTML={{ __html: social.icon }}
+          />
+        ))}
         <div className="w-0.5 bg-blue h-24"></div>
       </div>
     </div>

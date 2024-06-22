@@ -1,4 +1,5 @@
 import React from "react";
+import "../../App.css";
 
 function FormModal({ isOpen, message, onClose }) {
   return (
@@ -7,12 +8,12 @@ function FormModal({ isOpen, message, onClose }) {
         isOpen ? "" : "hidden"
       }`}
     >
-      <div className="bg-white p-10 rounded shadow-md">
-        <p className="text-lg">{message}</p>
+      <div className="dark-blue p-10 rounded dark-shadow">
+        <p className="text-lg text-green">{message}</p>
         <div className="flex justify-center mt-4">
           <button
             onClick={onClose}
-            className="mt-4 px-4 py-2 bg-orange text-white font-semibold rounded-md"
+            className="mt-4 px-4 py-2 bg-orange text-blue font-semibold rounded-md"
           >
             Close
           </button>

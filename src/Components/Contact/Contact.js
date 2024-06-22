@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FormModal from "./FormModal";
 import "../../App.css";
+import client from "../../client";
 
 function Contact() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +27,8 @@ function Contact() {
     };
 
     try {
-      const response = await fetch(process.env.REACT_APP_DISCORD_WEBHOOK_URL, {
+      const response = await fetch(data[0].Discord_Webhook_URL, {
+      
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,8 +59,30 @@ function Contact() {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "Contact_Section"] {
+            Discord_Webhook_URL
+        }`
+      )
+      .then((data) => {
+        if (data.length > 0) {
+          setData(data);
+        } else {
+          setError(true);
+        }
+      })
+      .catch(() => {
+        setError(true);
+      });
+  }, []);
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-darkBlue px-6 md:px-24 py-20" id="contact">
+    <div
+      className="flex justify-center items-center min-h-screen bg-darkBlue px-6 md:px-24 py-20"
+      id="contact"
+    >
       <div className="max-w-md w-full text-center">
         <div className="sm:mt-10 text-xl sm:text-2xl md:text-3xl text-green font-semibold border-b-4 border-blue inline-block mb-8">
           Get in touch!

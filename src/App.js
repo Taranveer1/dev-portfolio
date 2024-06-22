@@ -9,6 +9,7 @@ import "./App.css";
 
 import Index from "./Components/index";
 import Resume from "./Pages/Resume/Resume";
+import Manage from "./Pages/Manage/Manage";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/resume" element={<Resume />} />
-
+        <Route path="/manage" element={<Manage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
