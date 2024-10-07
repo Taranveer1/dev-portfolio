@@ -37,7 +37,8 @@ function About() {
       id="about"
     >
       <div className="max-w-5xl w-full">
-        <div className="flex flex-col md:flex-row md:items-start">
+        <div className="flex flex-col md:flex-row md:items-center">
+          {/* Left Side: Text */}
           <div className="order-2 md:order-1 flex-1 p-6">
             <div>
               <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit">
@@ -57,14 +58,17 @@ function About() {
               ))}
             </div>
           </div>
-          <div className="order-1 md:order-2 self-center md:self-end h-40 w-40 md:h-60 md:w-60">
+
+          {/* Right Side: Image */}
+          <div className="order-1 md:order-2 self-center md:self-start md:ml-8 h-60 w-60 md:h-80 md:w-80">
             <img
               src={data[0]?.Image?.asset?.url}
               alt="aboutMePicture"
-              className="rounded-sm"
+              className="rounded-sm object-cover h-full w-full"
             />
           </div>
         </div>
+
         <div className="mt-10 md:mt-40 flex justify-end">
           <a
             className="inline-flex items-center justify-center p-3 pt-2 pb-2 bg-green text-white rounded text-xs font-bold hover:scale-125"
