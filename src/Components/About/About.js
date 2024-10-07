@@ -60,11 +60,11 @@ function About() {
           </div>
 
           {/* Right Side: Image */}
-          <div className="order-1 md:order-2 self-center md:self-start md:ml-8 h-60 w-60 md:h-80 md:w-80">
+          <div className="order-1 md:order-2 self-center md:self-start md:ml-8 h-80 w-80 md:h-96 md:w-96 mt-6 md:mt-0">
             <img
               src={data[0]?.Image?.asset?.url}
               alt="aboutMePicture"
-              className="rounded-sm object-cover h-full w-full"
+              className="rounded-lg object-cover h-full w-full"
             />
           </div>
         </div>
