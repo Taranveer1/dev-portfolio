@@ -37,18 +37,18 @@ function About() {
       id="about"
     >
       <div className="max-w-5xl w-full">
-        <div className="flex flex-col md:flex-row md:items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center">
           {/* Left Side: Text */}
-          <div className="order-2 md:order-1 flex-1 p-6">
+          <div className="order-2 md:order-1 flex-1 p-6 text-center md:text-left">
             <div>
-              <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit">
+              <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit mx-auto md:mx-0">
                 About Me
               </p>
-              <p className="text-gray mt-2 md:mt-5 text-sm sm:text-lg w-10/12 font-medium">
+              <p className="text-gray mt-2 md:mt-5 text-sm sm:text-lg w-full md:w-10/12 font-medium mx-auto md:mx-0">
                 {data.map((item) => item.About_Me_Text)}
               </p>
             </div>
-            <div className="flex flex-wrap items-center justify-start gap-2.5 mt-4">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 mt-4">
               {data[0]?.Icons.map((iconHtml, index) => (
                 <div
                   key={index}
@@ -69,7 +69,7 @@ function About() {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-40 flex justify-end">
+        <div className="mt-10 md:mt-20 flex justify-center md:justify-end">
           <a
             className="inline-flex items-center justify-center p-3 pt-2 pb-2 bg-green text-white rounded text-xs font-bold hover:scale-125"
             href="/resume"
