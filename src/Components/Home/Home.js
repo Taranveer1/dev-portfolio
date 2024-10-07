@@ -31,17 +31,17 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center bg-darkBlue min-h-screen p-8" id="home">
+    <div className="relative bg-darkBlue min-h-screen flex items-center justify-center p-8" id="home">
       <div className="relative w-full max-w-4xl">
         {/* Text Content */}
         <div className="text-left z-10 relative">
-          <p className="text-green text-xl font-bold mb-3 md:mb-6 md:text-2xl">
+          <p className="text-green text-xl font-bold mb-2 md:text-2xl">
             Hi, my name is...
           </p>
-          <h1 className="text-blue text-5xl mb-6 font-bold md:text-7xl">
+          <h1 className="text-blue text-5xl mb-4 font-bold md:text-7xl">
             {data[0]?.Name || 'Taranveer Flora'}
           </h1>
-          <p className="text-gray text-md md:text-2xl mb-6 font-bold font-mono">
+          <p className="text-gray text-md md:text-2xl mb-4 font-bold font-mono">
             <span className="text-green">{"<"}</span>{data[0]?.Code_Phrase || 'I develop cool things for fun.'}
             <span className="text-green">{"/>"}</span>
           </p>
@@ -60,15 +60,15 @@ function Home() {
         </div>
 
         {/* Green L-shaped bar (Top-left) */}
-        <div className="absolute top-0 left-0 w-1/3 h-1/3">
-          <div className="absolute top-0 left-0 bg-green h-1 w-full"></div>
-          <div className="absolute top-0 left-0 bg-green h-full w-1"></div>
+        <div className="absolute top-0 left-0 w-2/5 h-2/5">
+          <div className="absolute top-0 left-0 bg-green h-0.5 w-full"></div>
+          <div className="absolute top-0 left-0 bg-green h-full w-0.5"></div>
         </div>
 
         {/* Green L-shaped bar (Bottom-right, flipped) */}
-        <div className="absolute bottom-0 right-0 w-1/3 h-1/3">
-          <div className="absolute bottom-0 right-0 bg-green h-1 w-full"></div>
-          <div className="absolute bottom-0 right-0 bg-green h-full w-1"></div>
+        <div className="absolute bottom-0 right-0 w-1/4 h-1/4">
+          <div className="absolute bottom-0 right-0 bg-green h-0.5 w-full"></div>
+          <div className="absolute bottom-0 right-0 bg-green h-full w-0.5"></div>
         </div>
       </div>
     </div>
