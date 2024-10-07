@@ -10,11 +10,11 @@ function Home() {
     client
       .fetch(
         `*[_type == "Home_Section"] {
-            Nav_Title,
-            Name,
-            Code_Phrase,
-            First_Description,
-            Second_Description
+          Nav_Title,
+          Name,
+          Code_Phrase,
+          First_Description,
+          Second_Description
         }`
       )
       .then((data) => {
@@ -40,22 +40,18 @@ function Home() {
         <p className="text-green text-xl font-bold mb-3 md:mb-6 md:text-2xl">
           Hi, my name is...
         </p>
-
         <p className="text-blue text-5xl mb-6 font-bold md:text-8xl">
           {data.map((item) => item.Name)}
         </p>
-
         <p className="text-gray text-md md:text-3xl mb-6 font-bold font-mono">
           <span className="text-green">{"<"}</span>{data.map((item) => item.Code_Phrase)}
           <span className="text-green">{"/>"}</span>
         </p>
-
         <p className="text-gray text-sm md:text-xl font-semibold">
           {data.map((item) => item.First_Description)}
           <br />
           {data.map((item) => item.Second_Description)}
         </p>
-
         <a
           className="inline-flex w-auto items-center justify-center p-3 pt-2 pb-2 mt-10 bg-green text-white rounded-full text-xs font-bold hover:scale-125"
           href="#about"
@@ -63,17 +59,15 @@ function Home() {
           Scroll Down
           <i className="bx bxs-chevron-down-circle bg-green pl-1"></i>
         </a>
-
         {/* Green L-shaped bar (Top-left) */}
         <div className="absolute top-[-30px] left-[-30px]">
           <div className="l-bar-horizontal bg-green h-[6px] w-[300px]"></div>
           <div className="l-bar-vertical bg-green h-[300px] w-[6px]"></div>
         </div>
-
         {/* Green L-shaped bar (Bottom-right, flipped) */}
-        <div className="absolute bottom-[-30px] right-[-30px]">
-          <div className="l-bar-horizontal bg-green h-[6px] w-[300px]"></div>
-          <div className="l-bar-vertical bg-green h-[300px] w-[6px]"></div>
+        <div className="absolute bottom-0 right-0">
+          <div className="l-bar-vertical bg-green h-[300px] w-[6px] absolute bottom-0 right-0"></div>
+          <div className="l-bar-horizontal bg-green h-[6px] w-[300px] absolute bottom-0 right-0"></div>
         </div>
       </div>
     </div>
