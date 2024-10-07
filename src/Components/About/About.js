@@ -41,10 +41,11 @@ function About() {
           {/* Left Side: Text */}
           <div className="order-2 md:order-1 flex-1 p-6 text-center md:text-left">
             <div>
-              <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit mx-auto md:mx-0">
+              <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit md:mx-0 mb-2"
+                 style={{ marginLeft: '10px' }}> {/* Adjusted margin to move the title slightly left */}
                 About Me
               </p>
-              <p className="text-blue mt-2 md:mt-5 text-sm sm:text-lg w-full md:w-10/12 font-medium mx-auto md:mx-0">
+              <p className="text-blue mt-2 md:mt-5 text-sm sm:text-lg w-full md:w-11/12 font-medium mx-auto md:mx-0">
                 {data.map((item) => item.About_Me_Text)}
               </p>
             </div>
