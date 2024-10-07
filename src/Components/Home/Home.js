@@ -75,14 +75,14 @@ function Home() {
 
           {/* Green L-shaped bar (Top-left) */}
           <div className="absolute top-0 left-0 w-1/2 h-1/2">
-            <div className="absolute top-0 left-0 bg-green h-1 w-full"></div>
-            <div className="absolute top-0 left-0 bg-green h-full w-1"></div>
+            <div className="absolute top-0 left-0 bg-green h-2 w-full"></div> {/* Increased thickness */}
+            <div className="absolute top-0 left-0 bg-green h-full w-2"></div> {/* Increased thickness */}
           </div>
 
           {/* Green L-shaped bar (Bottom-right, flipped) */}
           <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
-            <div className="absolute bottom-0 right-0 bg-green h-1 w-full"></div>
-            <div className="absolute bottom-0 right-0 bg-green h-full w-1"></div>
+            <div className="absolute bottom-0 right-0 bg-green h-2 w-full"></div> {/* Increased thickness */}
+            <div className="absolute bottom-0 right-0 bg-green h-full w-2"></div> {/* Increased thickness */}
           </div>
         </div>
       </div>
