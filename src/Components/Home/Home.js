@@ -76,10 +76,6 @@ function Home() {
           {/* Green L-shaped bar (Top-left) */}
           {/* Green L-shaped bar (Top-left) */}
             {/* Green L-shaped bar (Top-left) */}
-<div className="absolute top-[-40px] left-[-40px] w-1/2 h-1/2"> {/* Moved up and to the left */}
-  <div className="absolute top-0 left-0 bg-green h-2 w-full"></div> {/* Increased thickness */}
-  <div className="absolute top-0 left-0 bg-green h-full w-2"></div> {/* Increased thickness */}
-</div>
 
 {/* Green L-shaped bar (Bottom-right, flipped) */}
 <div className="absolute bottom-0 right-0 w-1/2 h-1/2">

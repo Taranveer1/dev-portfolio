@@ -44,7 +44,7 @@ function About() {
               <p className="text-xl sm:text-4xl font-semibold text-green border-b-4 border-blue w-fit mx-auto md:mx-0">
                 About Me
               </p>
-              <p className="text-gray mt-2 md:mt-5 text-sm sm:text-lg w-full md:w-10/12 font-medium mx-auto md:mx-0">
+              <p className="text-blue mt-2 md:mt-5 text-sm sm:text-lg w-full md:w-10/12 font-medium mx-auto md:mx-0">
                 {data.map((item) => item.About_Me_Text)}
               </p>
             </div>
@@ -60,7 +60,7 @@ function About() {
           </div>
 
           {/* Right Side: Image */}
-          <div className="order-1 md:order-2 flex flex-col items-center md:items-start">
+          <div className="order-1 md:order-2 flex flex-col items-center">
             <div className="h-80 w-80 md:h-96 md:w-96">
               <img
                 src={data[0]?.Image?.asset?.url}
@@ -70,7 +70,7 @@ function About() {
             </div>
 
             {/* View Resume Button */}
-            <div className="mt-6 md:mt-8">
+            <div className="mt-6 md:mt-8 flex justify-center w-full">
               <a
                 className="inline-flex items-center justify-center p-3 pt-2 pb-2 bg-green text-white rounded text-xs font-bold hover:scale-125"
                 href="/resume"
@@ -87,4 +87,3 @@ function About() {
 }
 
 export default About;
-
