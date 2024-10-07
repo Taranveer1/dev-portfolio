@@ -31,13 +31,10 @@ function Home() {
   }, []);
 
   return (
-    <div
-      className="relative flex justify-center items-center bg-darkBlue min-h-screen"
-      id="home"
-    >
-      <div className="relative max-w-3xl mx-auto px-4 py-16">
+    <div className="relative flex justify-center items-center bg-darkBlue min-h-screen p-8" id="home">
+      <div className="relative w-full max-w-4xl">
         {/* Text Content */}
-        <div className="text-left relative z-10">
+        <div className="text-left z-10 relative">
           <p className="text-green text-xl font-bold mb-3 md:mb-6 md:text-2xl">
             Hi, my name is...
           </p>
@@ -48,30 +45,30 @@ function Home() {
             <span className="text-green">{"<"}</span>{data[0]?.Code_Phrase || 'I develop cool things for fun.'}
             <span className="text-green">{"/>"}</span>
           </p>
-          <p className="text-gray text-sm md:text-lg font-semibold">
+          <p className="text-gray text-sm md:text-lg font-semibold mb-8">
             {data[0]?.First_Description || '3rd year Computer Science student @ PSU with concentrations in Software Engineering'}
             <br />
             {data[0]?.Second_Description || 'Eager to explore new opportunities, learn new things and have fun doing it!'}
           </p>
           <a
-            className="inline-flex w-auto items-center justify-center p-3 pt-2 pb-2 mt-10 bg-green text-white rounded-full text-xs font-bold hover:scale-110 transition-transform duration-300 ease-in-out"
+            className="inline-flex items-center justify-center px-6 py-3 bg-green text-white rounded-full text-sm font-bold hover:bg-opacity-90 transition-colors duration-300"
             href="#about"
           >
             Scroll Down
-            <i className="bx bxs-chevron-down-circle bg-green pl-1"></i>
+            <i className="bx bxs-chevron-down-circle ml-2"></i>
           </a>
         </div>
 
         {/* Green L-shaped bar (Top-left) */}
-        <div className="absolute top-0 left-0 w-32 h-32">
-          <div className="absolute top-0 left-0 bg-green h-0.5 w-full"></div>
-          <div className="absolute top-0 left-0 bg-green h-full w-0.5"></div>
+        <div className="absolute top-0 left-0 w-1/3 h-1/3">
+          <div className="absolute top-0 left-0 bg-green h-1 w-full"></div>
+          <div className="absolute top-0 left-0 bg-green h-full w-1"></div>
         </div>
 
         {/* Green L-shaped bar (Bottom-right, flipped) */}
-        <div className="absolute bottom-0 right-0 w-32 h-32">
-          <div className="absolute bottom-0 right-0 bg-green h-0.5 w-full"></div>
-          <div className="absolute bottom-0 right-0 bg-green h-full w-0.5"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3">
+          <div className="absolute bottom-0 right-0 bg-green h-1 w-full"></div>
+          <div className="absolute bottom-0 right-0 bg-green h-full w-1"></div>
         </div>
       </div>
     </div>
