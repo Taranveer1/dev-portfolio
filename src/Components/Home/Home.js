@@ -62,13 +62,13 @@ function Home() {
       </div>
 
       {/* Green L-shaped bar (Top-left) */}
-      <div className="absolute top-0 left-0 w-1/3 h-1/3">
+      <div className="absolute top-8 left-8 w-64 h-64">
         <div className="absolute top-0 left-0 bg-green h-1 w-full"></div>
         <div className="absolute top-0 left-0 bg-green h-full w-1"></div>
       </div>
 
       {/* Green L-shaped bar (Bottom-right, flipped) */}
-      <div className="absolute bottom-0 right-0 w-1/3 h-1/3">
+      <div className="absolute bottom-8 right-8 w-64 h-64">
         <div className="absolute bottom-0 right-0 bg-green h-1 w-full"></div>
         <div className="absolute bottom-0 right-0 bg-green h-full w-1"></div>
       </div>
