@@ -11,15 +11,15 @@
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
   }
   /* Horizontal part of the "L" */
-.l-bar {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-/* Vertical part of the "L" */
-.l-bar-vertical {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+  .l-bar-horizontal {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .l-bar-vertical {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  

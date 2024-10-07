@@ -36,7 +36,7 @@ function Home() {
       id="home"
     >
       {/* Text Content */}
-      <div className="text-left mb-40 md:mb-0 p-6 md:p-0">
+      <div className="text-left mb-40 md:mb-0 p-6 md:p-0 relative">
         <p className="text-green text-xl font-bold mb-3 md:mb-6 md:text-2xl">
           Hi, my name is...
         </p>
@@ -63,12 +63,12 @@ function Home() {
           Scroll Down
           <i className="bx bxs-chevron-down-circle bg-green pl-1"></i>
         </a>
-      </div>
 
-      {/* Green L-shaped bar */}
-      <div className="absolute bottom-0 right-0">
-        <div className="l-bar bg-green h-2 w-full md:w-[80%]"></div>
-        <div className="l-bar-vertical bg-green h-[80px] md:h-[120px] w-2"></div>
+        {/* Green L-shaped bar */}
+        <div className="absolute bottom-[-30px] right-[-30px]">
+          <div className="l-bar-horizontal bg-green h-[2px] w-[150px]"></div>
+          <div className="l-bar-vertical bg-green h-[150px] w-[2px]"></div>
+        </div>
       </div>
     </div>
   );
