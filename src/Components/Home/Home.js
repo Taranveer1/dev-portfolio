@@ -64,8 +64,8 @@ function Home() {
           <i className="bx bxs-chevron-down-circle bg-green pl-1"></i>
         </a>
 
-        {/* Inverted Green L-shaped bar */}
-        <div className="absolute bottom-[-50px] right-[-50px]">
+        {/* Inverted Green L-shaped bar (Top-left) */}
+        <div className="absolute top-[-50px] left-[-50px]">
           <div className="l-bar-horizontal bg-green h-[6px] w-[300px]"></div>
           <div className="l-bar-vertical bg-green h-[300px] w-[6px]"></div>
         </div>
