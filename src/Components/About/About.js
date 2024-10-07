@@ -37,7 +37,7 @@ function About() {
       id="about"
     >
       <div className="max-w-5xl w-full">
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8">
           {/* Left Side: Text */}
           <div className="order-2 md:order-1 flex-1 p-6 text-center md:text-left">
             <div>
@@ -60,23 +60,26 @@ function About() {
           </div>
 
           {/* Right Side: Image */}
-          <div className="order-1 md:order-2 self-center md:self-start md:ml-8 h-80 w-80 md:h-96 md:w-96 mt-6 md:mt-0">
-            <img
-              src={data[0]?.Image?.asset?.url}
-              alt="aboutMePicture"
-              className="rounded-lg object-cover h-full w-full"
-            />
-          </div>
-        </div>
+          <div className="order-1 md:order-2 flex flex-col items-center md:items-start">
+            <div className="h-80 w-80 md:h-96 md:w-96">
+              <img
+                src={data[0]?.Image?.asset?.url}
+                alt="aboutMePicture"
+                className="rounded-lg object-cover h-full w-full"
+              />
+            </div>
 
-        <div className="mt-10 md:mt-20 flex justify-center md:justify-end">
-          <a
-            className="inline-flex items-center justify-center p-3 pt-2 pb-2 bg-green text-white rounded text-xs font-bold hover:scale-125"
-            href="/resume"
-            target="_blank"
-          >
-            View Resume
-          </a>
+            {/* View Resume Button */}
+            <div className="mt-6 md:mt-8">
+              <a
+                className="inline-flex items-center justify-center p-3 pt-2 pb-2 bg-green text-white rounded text-xs font-bold hover:scale-125"
+                href="/resume"
+                target="_blank"
+              >
+                View Resume
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -84,3 +87,4 @@ function About() {
 }
 
 export default About;
+
