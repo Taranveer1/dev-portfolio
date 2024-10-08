@@ -12,6 +12,7 @@ function Projects() {
 
   const handleViewMore = (project) => {
     setCurrentProject(project);
+    console.log(project)
     setShowModal(true);
   };
 
@@ -115,7 +116,7 @@ function Projects() {
                     </div>
 
                     <div className="md:w-3/2 sm:w-96 text-md mt-4 text-gray font-medium">
-                      {currentProject.Desc}
+                      {currentProject.Full_Desc}
                     </div>
 
                     <p className="text-lg text-gray mt-4 font-semibold">

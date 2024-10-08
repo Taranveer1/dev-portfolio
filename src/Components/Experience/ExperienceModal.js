@@ -36,6 +36,9 @@ function ExperienceModal({ experience, onClose }) {
             📍{experience.Location}
           </p>
           <p className="text-md text-gray mt-2 font-light">{experience.Date}</p>
+          <div className="md:w-3/2 sm:w-96 text-md mt-2 text-blue font-light">
+            <p>{experience.Description}</p>
+          </div>
           <p className="text-lg text-gray mt-2 font-semibold">
             Technologies Used
           </p>
@@ -49,9 +52,7 @@ function ExperienceModal({ experience, onClose }) {
               ></div>
             ))}
           </div>
-          <div className="md:w-3/2 sm:w-96 text-md mt-2 text-gray font-medium">
-            <p>{experience.desc}</p>
-          </div>
+   
           <button
             className="hover-bounce mt-4 rounded-full px-4 py-2 text-xl font-semibold text-gray shadow-lg"
             onClick={closeModal}

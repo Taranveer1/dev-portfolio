@@ -31,6 +31,7 @@ function ExperienceItem() {
       .then((data) => {
         if (data.length > 0) {
           setData(data);
+          console.log(data)
         } else {
           setError(true);
         }
