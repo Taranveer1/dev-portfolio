@@ -27,7 +27,7 @@ function Navbar() {
   }, [scrolled]);
 
   return (
-    <div className="fixed w-full z-10">
+    <div className="fixed w-full z-50">
       <div className={`transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">

@@ -83,7 +83,7 @@ function About() {
               <img
                 src={data[0]?.Image?.asset?.url}
                 alt="aboutMePicture"
-                className="rounded-lg object-cover h-full w-full relative z-10 shadow-xl"
+                className="rounded-lg object-cover h-full w-full relative z-1 shadow-xl"
               />
             </div>
 
