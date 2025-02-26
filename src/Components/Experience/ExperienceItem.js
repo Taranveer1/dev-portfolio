@@ -52,34 +52,37 @@ function ExperienceItem() {
   };
 
   return (
-    <div className="mx-auto mt-1 md:mt-5 p-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
+    <div className="mx-auto mt-1 md:mt-5 p-5 w-full max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {data.map((experience, index) => (
           <div
             key={index}
-            className="cursor-pointer dark-shadow rounded-lg flex items-center p-5 bg-gray-800 transform transition-transform duration-300 ease-in-out hover:scale-105"
+            className="cursor-pointer bg-white rounded-xl shadow-lg hover:shadow-xl flex items-center p-6 transform transition-all duration-300 ease-in-out hover:-translate-y-2 border border-gray-100"
             onClick={() => openModal(experience)}
           >
-            <div className="border-r-2 border-blue p-3">
+            <div className="mr-6 p-4 bg-gray-100 rounded-lg">
               <img
                 src={experience.Image.asset.url}
-                alt={`${experience.Name} logo`}
-                className="object-cover h-14 w-14 md:w-24 md:h-24 rounded"
+                alt={`${experience.Company_Name} logo`}
+                className="object-cover h-16 w-16 md:w-20 md:h-20 rounded-lg"
               />
             </div>
-            <div className="ml-4">
-              <p className="font-bold text-green text-md md:text-xl">
+            <div>
+              <h3 className="font-bold text-primary text-lg md:text-xl mb-1">
                 {experience.Company_Name}
-              </p>
-              <p className="text-gray font-semibold mb-1 text-sm md:text-lg">
+              </h3>
+              <p className="text-gray-700 font-medium mb-1 text-sm md:text-base">
                 {experience.Role}
               </p>
-              <p className="text-gray text-xs md:text-md">
+              <p className="text-gray-500 text-xs md:text-sm mb-1">
                 {experience.Location}
               </p>
-              <p className="text-gray text-xs md:text-md">{experience.Date}</p>
-              <p className="text-blue font-semibold text-xs md:text-base mt-2">
+              <p className="text-gray-500 text-xs md:text-sm mb-2">{experience.Date}</p>
+              <p className="text-accent font-medium text-xs md:text-sm inline-flex items-center">
                 More info
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </p>
             </div>
           </div>
