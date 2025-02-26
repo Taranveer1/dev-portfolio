@@ -39,19 +39,40 @@ function About() {
       <div className="max-w-5xl w-full">
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-12">
           {/* Left Side: Text */}
-          <div className="order-2 md:order-1 flex-1 p-6 text-center md:text-left">
+          <div className="order-2 md:order-1 flex-1 p-6 text-left">
             <div>
               <h2 className="text-2xl sm:text-4xl font-bold mb-6 relative">
                 <span className="gradient-text">About Me</span>
                 <div className="absolute bottom-0 left-0 w-16 h-1 bg-accent rounded-full"></div>
               </h2>
-              <p className="text-gray-700 mt-2 md:mt-5 text-sm sm:text-lg w-full leading-relaxed">
-                {data.map((item) => item.About_Me_Text)}
-              </p>
+              <div className="text-gray-700 mt-2 md:mt-5 text-sm sm:text-lg w-full space-y-4 leading-relaxed">
+                {data.length > 0 && data[0].About_Me_Text ? (
+                  data[0].About_Me_Text.split('\n').map((paragraph, index) => (
+                    <p key={index} className="mb-4">
+                      {paragraph}
+                    </p>
+                  ))
+                ) : (
+                  <>
+                    <p className="mb-4">
+                      I'm Taranveer Flora, a Computer Science student at Penn State University with a focus on software development and engineering.
+                    </p>
+                    <p className="mb-4">
+                      I've gained hands-on experience through internships at SPARC Foundation and PassMaster, where I developed full-stack applications, enhanced server performance, and built user-friendly interfaces.
+                    </p>
+                    <p className="mb-4">
+                      My skills span a range of technologies, including React Native, Python, Node.js, and AWS. I enjoy tackling challenging projects, like leading the development of the RoverPass mobile app, where I ensured seamless integration of back-end and front-end systems.
+                    </p>
+                    <p>
+                      I'm passionate about creating efficient, secure solutions and look forward to contributing to impactful projects in the tech industry.
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
             
-            <h3 className="text-lg font-semibold text-gray-800 mt-8 mb-4">Technologies I work with:</h3>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-4">
+            <h3 className="text-lg font-semibold text-gray-800 mt-12 mb-6">Technologies I work with:</h3>
+            <div className="flex flex-wrap items-start justify-start gap-6 mt-4">
               {data[0]?.Icons ? (
                 data[0].Icons.map((iconHtml, index) => (
                   <div

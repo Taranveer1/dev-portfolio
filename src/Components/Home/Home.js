@@ -31,23 +31,16 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-br from-dark to-gray-800 min-h-screen flex flex-col" id="home">
+    <div className="relative bg-dark min-h-screen flex flex-col" id="home">
       {/* Main Content */}
       <div className="flex-grow flex items-center justify-center p-8">
         <div className="relative w-full max-w-4xl">
-          {/* Background Elements */}
-          <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-30"></div>
-          
-          {/* Decorative Elements */}
-          <div className="absolute -top-20 -left-20 w-64 h-64 bg-secondary/20 rounded-full filter blur-3xl"></div>
-          <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-accent/20 rounded-full filter blur-3xl"></div>
-          
           {/* Text Content */}
           <div className="text-left z-10 relative">
             <p className="text-accent text-xl font-bold mb-2 md:text-2xl">
               Hi, my name is...
             </p>
-            <h1 className="gradient-text text-5xl mb-4 font-bold md:text-7xl">
+            <h1 className="text-white text-5xl mb-4 font-bold md:text-7xl">
               {data[0]?.Name || 'Taranveer Flora'}
             </h1>
             <p className="text-gray-300 text-md md:text-2xl mb-4 font-bold font-mono">
@@ -56,13 +49,11 @@ function Home() {
             </p>
             <p className="text-gray-300 text-sm md:text-lg font-semibold mb-8 max-w-2xl">
               {data[0]?.First_Description || '3rd year Computer Science student @ PSU with concentrations in Software Engineering'}
-              <br />
-              {data[0]?.Second_Description || 'Eager to explore new opportunities, learn new things and have fun doing it!'}
             </p>
             
             {/* CTA Button */}
             <a
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full text-sm font-bold hover:from-primary/90 hover:to-secondary/90 transition-all duration-300 shadow-lg hover:shadow-primary/50"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-full text-sm font-bold hover:bg-primary/90 transition-all duration-300 shadow-lg"
               href="#about"
             >
               Explore My Work
